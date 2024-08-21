@@ -15,7 +15,6 @@ export default function UsersByInterval({ dataUsers }) {
             const age = user.dob.age 
             if (age >= intervals[0] && age < intervals[1]) {
                 intervalGroups[intervals[0]] += 1
-                
             } else if (age < intervals[2]) {
                 intervalGroups[intervals[1]] += 1
             } else if (age < intervals[3]) {
@@ -28,24 +27,23 @@ export default function UsersByInterval({ dataUsers }) {
                 intervalGroups[intervals[5]] += 1
             }
         })
-        setUsersByInterval(intervalGroups)
+        const formatData = Object.entries(intervalGroups).map(([grupoEdad, cantidad]) => (
+            {
+                grupoEdad,
+                cantidad
+            }
+        ))
+        setUsersByInterval(formatData)
     }, [dataUsers])
-    
-    const chartData = Object.entries(usersByInterval).map(([grupoEdad, cantidad]) => (
-        {
-            grupoEdad,
-            cantidad
-        }
-    ))
     
     return(
         <section>
-            <h3 className="text-lg font-medium text-tremor-content-strong">
-                Número de usuarios por grupo de edad
+            <h3 className="text-lg font-medium text-tremor-content-strong text-center">
+                Usuarios por grupo de edad
             </h3>
             <BarChart
                 className="mt-6"
-                data={chartData}
+                data={usersByInterval}
                 index="grupoEdad"
                 categories={['cantidad']}
                 colors={['blue']}

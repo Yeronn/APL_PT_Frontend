@@ -30,8 +30,8 @@ export default function UsersByGender({ dataUsers = [] }) {
 
     return(
     <section>
-      <h3 className="text-lg font-medium text-tremor-content-strong">
-        Número de usuarios por género
+      <h3 className="text-lg font-medium text-tremor-content-strong text-center">
+         Usuarios por género
       </h3>
       <BarChart
         className="mt-6"

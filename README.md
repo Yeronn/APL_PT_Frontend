@@ -1,8 +1,17 @@
 # React + Vite
+Para poder ejecutar el proyecto tiene que tener instalado en el equipo NodeJs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Instrucciones para ejecutar el proyecto
 
-Currently, two official plugins are available:
+1. Descargar el proyecto en el equipo usando git o manualmente en github
+    Git: git clone https://github.com/Yeronn/APL_PT_Frontend.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Mediante la terminal ingresar a la carpetadel proyecto y ejecutar
+
+    npm install
+
+3. Para ejecutar el proyecto ingresar en la terminal lo siguiente
+
+    npm run dev
+
+4. Abrir el en navegador la url suministrada por la terminal al ejecutar el comando anterior
