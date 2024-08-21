@@ -19,33 +19,29 @@ export default function UsersByGender({ dataUsers = [] }) {
 
     const chartData = [
         {
-            gender: 'male',
-            amount: usersByGender.male
+            genero: 'Hombre',
+            cantidad: usersByGender.male
         },
         {
-            gender: 'female',
-            amount: usersByGender.female
+            genero: 'Mujer',
+            cantidad: usersByGender.female
         }
     ]
 
-    console.log(chartData)
-
     return(
     <section>
-      <h3 className="text-lg font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+      <h3 className="text-lg font-medium text-tremor-content-strong">
         Número de usuarios por género
       </h3>
       <BarChart
         className="mt-6"
         data={chartData}
-        index="gender"
-        categories={['amount']}
+        index="genero"
+        categories={['cantidad']}
         colors={['blue']}
         // valueFormatter={dataFormatter}
         yAxisWidth={48}
       />
     </section>
-
     )
-    
 }
